@@ -3,33 +3,33 @@
 To build your own version
 
 ```
-docker build -t name_you_want/docker-rtlsdr-dump1090 .
+docker build -t name_you_want/rtlsdr-dump1090 .
 ```
 
 To pull prebuilt image
 
 ```
-docker pull envoi/docker-rtlsdr-dump1090
+docker pull envoi/rtlsdr-dump1090
 ```
 
 To run
 
 ```
 # Show Dump1090 help and delete container
-docker run --rm -it -p 8944:8944 --name docker-rtlsdr-dump1090 --device=/dev/bus/usb envoi/docker-rtlsdr-dump1090 --help
+docker run --rm -it -p 8944:8944 --name rtlsdr-dump1090 --device=/dev/bus/usb envoi/rtlsdr-dump1090 --help
 
 # Run dump1090 in interactive mode with Auto Gain Control and Decoding of SSR Modes 3/A & 3/C enabled
-docker run --rm -it -p 8944:8944 --name docker-rtlsdr-dump1090 --device=/dev/bus/usb envoi/docker-rtlsdr-dump1090 --interactive --net-http-port 8944 --enable-agc --modeac
+docker run --rm -it -p 8944:8944 --name rtlsdr-dump1090 --device=/dev/bus/usb envoi/rtlsdr-dump1090 --interactive --net-http-port 8944 --enable-agc --modeac
 ```
 
 *NOTE: commands listed above remove the container when it exits, to retain container after exit remove use the following commands instead*
 
 ```
 # Show Dump1090 help and delete container
-docker run -it -p 8944:8944 --name docker-rtlsdr-dump1090 --device=/dev/bus/usb envoi/docker-rtlsdr-dump1090 --help
+docker run -it -p 8944:8944 --name rtlsdr-dump1090 --device=/dev/bus/usb envoi/rtlsdr-dump1090 --help
 
 # Run dump1090 in interactive mode with Auto Gain Control and Decoding of SSR Modes 3/A & 3/C enabled
-docker run -it -p 8944:8944 --name docker-rtlsdr-dump1090 --device=/dev/bus/usb envoi/docker-rtlsdr-dump1090 --interactive --net-http-port 8944 --enable-agc --modeac
+docker run -it -p 8944:8944 --name rtlsdr-dump1090 --device=/dev/bus/usb envoi/rtlsdr-dump1090 --interactive --net-http-port 8944 --enable-agc --modeac
 ```
 
 ### Further Reading
